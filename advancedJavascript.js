@@ -242,23 +242,4 @@ function toWeirdCase(string){
     
     return transformedWords.join(" ");
     
-
-    
-    /*
-  var newString = string.split(" ");
-  var sumString = "";
-  for (var i = 0; i < newString.length; i++) {
-      if(i > 0) {
-          sumString += " ";
-      }
-      for (var j = 0; j < newString[i].length; j++) {
-          if( j % 2 === 0) {
-              sumString += newString[i][j].toUpperCase();
-          } else{
-              sumString += newString[i][j].toLowerCase();
-          }
-      }
-   } 
-    return sumString;
-    */
 }
