@@ -90,9 +90,7 @@ function addNumberToNumber(number){
         
         var add = chooseNumber + number;
         
-        document.write("Adding " + chooseNumber + " to " + number + " gives you " + add);
-        
-        return undefined;
+        return document.write("Adding " + chooseNumber + " to " + number + " gives you " + add);;
         
     }
     
