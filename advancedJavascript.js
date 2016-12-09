@@ -189,7 +189,10 @@ var car = {
         type: type, job: job
     };}
 }
+
+//Using for .. in in an object to find if a property exist in object.
 console.log("seats" in car);
+
 document.write("</br>");
 document.write(car.extras[1]);
 document.write("</br>");
