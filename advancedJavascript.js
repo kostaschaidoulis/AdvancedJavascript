@@ -1,8 +1,7 @@
 // Function Expression
 
 var calculate = function (input, cost) {
-    //this === window
-    
+ 
     var check;
     
     if (input === "island") {
@@ -18,17 +17,6 @@ var calculate = function (input, cost) {
    }
 };
 
-/*
-var obj = {
-    someFn: function () {
-        // this === obj
-        console.log(this.name);
-    },
-    name: "Matt"
-};
-
-obj.someFn.call({});
-*/
 
 var things = [];
 
