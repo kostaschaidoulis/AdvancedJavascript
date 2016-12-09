@@ -189,6 +189,7 @@ var car = {
         type: type, job: job
     };}
 }
+console.log("seats" in car);
 document.write("</br>");
 document.write(car.extras[1]);
 document.write("</br>");
