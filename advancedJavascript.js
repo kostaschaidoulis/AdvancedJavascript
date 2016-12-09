@@ -192,6 +192,8 @@ var car = {
 
 //Using for .. in in an object to find if a property exist in object.
 console.log("seats" in car);
+//Freezing an Object 
+Object.freeze(car);
 
 document.write("</br>");
 document.write(car.extras[1]);
@@ -334,3 +336,5 @@ EssayScore.prototype = {
 
 var kostasScore = EssayScore();
 console.log(kostasScore.totalScore());
+
+
