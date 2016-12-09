@@ -213,3 +213,120 @@ for(key in car) {
 
 Object.keys(car).forEach
 
+//Object creation and Manipulation with examples
+
+function Car(brand, make, speed) {
+    if (this instanceof Car) {
+       this.brand = brand;
+       this.make = make;
+       this.speed = speed;
+    } else {
+        return new Car();
+    }
+}
+
+Car.prototype = {
+    accelerate: function () {
+        console.log(parseInt(this.speed) + 5);
+    },
+    brake: function() {
+        console.log(parseInt(this.speed) - 5);
+    }
+};
+
+function Person(){
+    if(this instanceof Person){
+        this.name = prompt();
+        this.address = prompt();
+        this.age = prompt();
+        this.phone = prompt();
+    } else {
+        return new Person();
+    }
+}
+
+Person.prototype = {
+    info: function() {
+        console.log("Your info are: " + this.name + " " + this.address + " " + this.age + " " + this.phone);
+    }
+}
+
+function Employee() {
+    if(this instanceof Employee) {
+        this.name = prompt();
+        this.empNumber = prompt();
+        this.shiftNumber = function() {
+            var number = prompt();
+            number = parseInt(number);
+            if (!isNaN(number)) {
+                number = number; 
+            } else {
+               number = console.log("You enter invalid data");
+            }
+            return console.log(number);
+        };
+     } else {
+        return new Employee();     
+     }
+}
+
+
+
+function EssayScore() {
+    if(this instanceof EssayScore) {
+        this.grammar = function() {
+            var score = prompt();
+            score = parseInt(score);
+            if(!isNaN(score) && score > 0 && score <= 30) {
+                score = score;
+            } else {
+                score = console.log("Not a Number !");
+            }
+            return score;
+        };
+        this.spelling = function() {
+            var score = prompt();
+            score = parseInt(score);
+            if(!isNaN(score) && score > 0 && score <= 20) {
+                score = score;
+            } else {
+                score = console.log("Not a Number !");
+            }
+            return score;
+        };
+        this.length = function() {
+            var score = prompt();
+            score = parseInt(score);
+            if(!isNaN(score) && score > 0 && score <= 30) {
+                score = score;
+            } else {
+                score = console.log("Not a Number !");
+            }
+            return score;
+        };
+        this.content = function() {
+            var score = prompt();
+            score = parseInt(score);
+            if(!isNaN(score) && score > 0 && score <= 20) {
+                score = score;
+            } else {
+                score = console.log("Not a Number !");
+            }
+            return score;
+        };
+    } else {
+        return new EssayScore();
+    }
+}
+
+EssayScore.prototype = {
+    totalScore: function () {
+        var total = 0;
+        total = this.grammar() + this.content() + this.length() + this.spelling();
+        return total;
+    }
+}
+
+
+var kostasScore = EssayScore();
+console.log(kostasScore.totalScore());
