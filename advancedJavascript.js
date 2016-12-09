@@ -213,31 +213,3 @@ for(key in car) {
 
 Object.keys(car).forEach
 
-//Inheritance
-
-
-document.write("</br>");
-document.write("</br>");
-
-function toWeirdCase(string){
-    // Every odd index character is lowercase
-    // every even index character is uppercase (0 is even)
-    var words = string.split(" ");
-    var transformedWords = [];
-    var word;
-    
-    for (var i = 0; i < words.length; i++) {
-        word = "";
-        for (var j = 0; j < words[i].length; j++) {
-            if (j % 2 === 0) {
-                word += words[i][j].toUpperCase();
-            } else {
-                word += words[i][j].toLowerCase();
-            }
-        }
-        transformedWords.push(word);
-    }
-    
-    return transformedWords.join(" ");
-    
-}
