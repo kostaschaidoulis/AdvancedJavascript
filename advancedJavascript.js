@@ -157,6 +157,44 @@ total();
 
 document.write("</br>");
 
+//Recursion 
+
+var fraction = function (value1, value2) {
+    "use strict";
+    if (value1 < 30 && value2 > 0) {
+        console.log(value1 + "/" + value2);
+        return fraction(value1 + 1, value2 - 1);
+    } else {
+        return console.log(value1);
+    }
+};
+
+fraction(1, 30);
+
+var multi = function (num) {
+    "use strict";
+    if (num < 100) {
+        console.log(num);
+        return multi(num * 2);
+    } else {
+        return console.log(num);
+    }
+};
+
+multi(10);
+
+var adding = function (num) {
+    "use strict";
+    if (num <= 1000) {
+        console.log(num);
+        return adding(num + 10);
+    } else {
+        return num;
+    }
+};
+
+adding(10);
+
 //Objects
 
 //Simpple object creation & Manipulation
